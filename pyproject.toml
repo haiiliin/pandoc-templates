@@ -25,16 +25,22 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = [
-    'sphinx-toolbox',
-]
 
 [project.urls]
 "Homepage" = "https://github.com/haiiliin/pandoc-templates/"
 "Documentation" = "https://pypandoctemplates.readthedocs.io/"
 
 [project.scripts]
-abqpy = "pypandoctemplates.__main__:cli"
+pypandoctemplates = "pypandoctemplates.__main__:cli"
+
+[tool.setuptools]
+packages = ['pypandoctemplates']
+
+[tool.setuptools.package-data]
+pypandoctemplates = ["latex/**/*.bst", "latex/**/*.cls", "latex/**/*.latex", "latex/**/*.sty", "latex/**/*.tex"]
+
+[tool.setuptools.dynamic.dependencies]
+file = ["requirements.txt"]
 
 [tool.setuptools_scm]
 root = "."

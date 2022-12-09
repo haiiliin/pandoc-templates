@@ -1,0 +1,97 @@
+\documentclass[
+    $if(documentclass)$$documentclass$$else$Journal$endif$,
+    letterpaper
+]{ascelike-new}
+%% Please choose the appropriate document class option:
+% "Journal" produces double-spaced manuscripts for ASCE journals.
+% "NewProceedings" produces single-spaced manuscripts for ASCE conference proceedings.
+% "Proceedings" produces older-style single-spaced manuscripts for ASCE conference proceedings. 
+%
+%% For more details and options, please see the notes in the ascelike-new.cls file.
+
+% Some useful packages...
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[figurename=Fig.,labelfont=bf,labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{amsbsy}
+\usepackage{newtxtext,newtxmath}
+\usepackage[colorlinks=true,citecolor=red,linkcolor=black]{hyperref}
+
+% Additional packages
+$if(packages)$
+$for(packages)$
+\usepackage$if(it.options)$[$it.options$]$endif${$it.name$}
+$endfor$
+$endif$
+
+% Preamble
+$if(preamble)$
+$preamble$
+$endif$
+
+%
+% Please add the first author's last name here for the footer:
+$if(nametag)$
+\NameTag{$nametag$, \today}
+$endif$
+% Note that this is not displayed if the NoPageNumbers option is used
+% in the documentclass declaration.
+%
+\begin{document}
+
+% You will need to make the title all-caps
+$if(title)$
+\title{$title$}
+$endif$
+
+% Authors
+$if(authors)$
+$for(authors)$
+\author[$it.index$]{$it.name$}
+$endfor$
+$endif$
+
+% Affiliations
+$if(affiliations)$
+$for(affiliations)$
+\affil[$it.index$]{$it.affiliation$}
+$endfor$
+$endif$
+
+\maketitle
+
+% Please include an abstract:
+$if(abstract)$
+\begin{abstract}
+$abstract$
+
+$if(keywords)$
+\noindent
+\textbf{Keywords:} $for(keywords)$ $it$$sep$, $endfor$
+$endif$
+
+\end{abstract}
+$endif$
+
+% Main body
+$body$
+
+%
+% Here's the list of references:
+%
+$if(bibliography)$
+\label{section:references}
+\bibliography{$bibliography$}
+$endif$
+
+% List of tables and figures
+\listoftables
+\listoffigures
+
+\end{document}

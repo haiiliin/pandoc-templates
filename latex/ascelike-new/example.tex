@@ -1,0 +1,84 @@
+\documentclass[
+    Journal,
+    letterpaper
+]{ascelike-new}
+%% Please choose the appropriate document class option:
+% "Journal" produces double-spaced manuscripts for ASCE journals.
+% "NewProceedings" produces single-spaced manuscripts for ASCE conference proceedings.
+% "Proceedings" produces older-style single-spaced manuscripts for ASCE conference proceedings. 
+%
+%% For more details and options, please see the notes in the ascelike-new.cls file.
+
+% Some useful packages...
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[figurename=Fig.,labelfont=bf,labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+%\usepackage{amsbsy}
+\usepackage{newtxtext,newtxmath}
+\usepackage[colorlinks=true,citecolor=red,linkcolor=black]{hyperref}
+
+% Additional packages
+\usepackage{filecontents}
+
+% Preamble
+\begin{filecontents*}{example.bib}
+@Article{key,
+    author = {author},
+    title  = {title},
+}
+\end{filecontents*}
+
+%
+% Please add the first author's last name here for the footer:
+\NameTag{Wang, \today}
+% Note that this is not displayed if the NoPageNumbers option is used
+% in the documentclass declaration.
+%
+\begin{document}
+
+% You will need to make the title all-caps
+\title{Example Paper}
+
+% Authors
+\author[1]{Hai-Lin Wang}
+\author[1,*]{Zhen-Yu Yin}
+
+% Affiliations
+\affil[1]{Department of Civil and Environmental Engineering, The Hong
+Kong Polytechnic University, Hong Kong, China}
+
+\maketitle
+
+% Please include an abstract:
+\begin{abstract}
+This is an example paper.
+
+\noindent
+\textbf{Keywords:}  example,  paper
+
+\end{abstract}
+
+% Main body
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+This is an example of a document written in Markdown and converted to
+LaTeX using Pandoc.
+
+%
+% Here's the list of references:
+%
+\label{section:references}
+\bibliography{example.bib}
+
+% List of tables and figures
+\listoftables
+\listoffigures
+
+\end{document}

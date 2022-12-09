@@ -1,0 +1,3 @@
+[submodule "defaults"]
+	path = defaults
+	url = https://github.com/jgm/pandoc-templates.git

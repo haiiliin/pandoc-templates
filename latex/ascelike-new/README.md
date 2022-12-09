@@ -48,6 +48,10 @@ keywords:
     - paper
 bibliography: example.bib
 ...
+
+# Introduction
+
+This is an example of a document written in Markdown and converted to LaTeX using Pandoc.
 ```
 
 ## Usage

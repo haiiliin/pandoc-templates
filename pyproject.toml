@@ -12,7 +12,7 @@ authors = [
 description = "Templates for pandoc"
 readme = "README.md"
 dynamic = ["version"]
-requires-python = ">=3.7"
+requires-python = ">=3.7,<4.0"
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -54,4 +54,4 @@ target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
 include = '(pypandoctemplates/.*\.py)'
 
 [tool.pytest.ini_options]
-testpaths = ["."]
+testpaths = ["pypandoctemplates", "tests"]

@@ -31,7 +31,7 @@ classifiers = [
 "Documentation" = "https://pypandoctemplates.readthedocs.io/"
 
 [project.scripts]
-pypandoctemplates = "pypandoctemplates.__main__:cli"
+pypandoctemplates = "pypandoctemplates.__main__:main"
 
 [tool.setuptools]
 packages = ['pypandoctemplates']

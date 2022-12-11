@@ -28,7 +28,7 @@ def register(cls):
 class LaTeX(TemplateFormat):
     name = "latex"
     exts = ["tex"]
-    required_exts = ["bib", "bst", "cls", "sty", "tex"]
+    required_exts = ["bib", "bst", "cls", "latex", "md", "sty", "tex"]
 
 
 @register

@@ -55,3 +55,4 @@ include = '(pypandoctemplates/.*\.py)'
 
 [tool.pytest.ini_options]
 testpaths = ["pypandoctemplates", "tests"]
+addopts = """-s --cov=pypandoctemplates --cov-report=xml --cov-report=html --cov-report=term-missing --doctest-modules"""

@@ -65,7 +65,7 @@ workflow run.
 ## Compile the document locally
 
 To compile the document locally, you need to have a LaTeX distribution (e.g. [TeX Live](https://www.tug.org/texlive/))
-and [pandoc](https://pandoc.org/) installed on your machine.
+and [Pandoc](https://pandoc.org/) installed on your machine.
 
 Copy the required template files from the `templates/{template}` directory to the root of the repository (usually
 only `*.cls`, `*.sty`, and `*.bst` files are required). Then run the following command in the root of the repository:

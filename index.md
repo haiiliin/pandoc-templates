@@ -13,7 +13,7 @@
 :caption: 'Contents:'
 :maxdepth: 2
 
-templates/index
+templates/ascelike-new/README
 ```
 
 # Indices and tables

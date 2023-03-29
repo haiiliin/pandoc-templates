@@ -1,21 +1,24 @@
 # ascelike-new: Template for Preparing Your Submission to the American Society Of Civil Engineers (ASCE)
 
-This is a template for preparing your submission to the American Society Of Civil Engineers (ASCE). It is based on the [ASCE LaTeX template](https://www.overleaf.com/latex/templates/template-for-preparing-your-submission-to-the-american-society-of-civil-engineers-asce/pbwcqsvndpty/).
+This is a template for preparing your submission to the American Society Of Civil Engineers (ASCE). It is based on 
+[ASCE LaTeX template](https://www.overleaf.com/latex/templates/template-for-preparing-your-submission-to-the-american-society-of-civil-engineers-asce/pbwcqsvndpty/).
 
 ## Metadata and Options
 
 Options are set in the YAML header. The following options are available:
 
-- `documentclass` (string, optional, by default `Journal`): Document class, e.g. `Journal`, `Proceedings` or `NewProceedings`
-- `packages` (list of dictionaries with keys `name`, `options`, optional): Packages to be loaded
-- `preamble` (string, optional): LaTeX code to be inserted in the preamble
-- `title` (string, required): Title of the paper
-- `authors` (list of dictionaries with keys `index`, `name`, required): Authors of the paper
-- `affiliations` (list of dictionaries with keys `index`, `affiliation`, required): Affiliations of the authors
-- `nametag` (string, required): Name tag of the paper, usually last name of the first author
-- `abstract` (string, required): Abstract of the paper
-- `keywords` (list of strings, required): Keywords of the paper
-- `bibliography` (string, required): Path to the bibliography (`*.bib`) file
+| Key             | Type   | Required  | Default | Description                                                                        |
+|-----------------|--------|-----------|---------|------------------------------------------------------------------------------------|
+| `documentclass` | string | no        | Journal | Document class, e.g. `Journal`, `Proceedings` or `NewProceedings`                  |
+| `packages`      | list   | no        |         | Packages to be loaded, list of dictionaries with keys `name`, `options`            |
+| `preamble`      | string | no        |         | LaTeX code to be inserted in the preamble                                          |
+| `title`         | string | yes       |         | Title of the paper                                                                 |
+| `authors`       | list   | yes       |         | Authors of the paper, list of dictionaries with keys `index`, `name`               |
+| `affiliations`  | list   | yes       |         | Affiliations of the authors, list of dictionaries with keys `index`, `affiliation` |
+| `nametag`       | string | yes       |         | Name tag of the paper, usually last name of the first author                       |
+| `abstract`      | string | yes       |         | Abstract of the paper                                                              |
+| `keywords`      | list   | yes       |         | Keywords of the paper, list of strings                                             |
+| `bibliography`  | string | yes       |         | Path to the bibliography (`*.bib`) file                                            |
 
 ## Example
 

@@ -1,0 +1,59 @@
+# Config file for the templates
+
+[templates.base]
+
+    [templates.base.packages]
+    type = "list"
+    description = "Packages to be loaded, list of dictionaries with keys `name`, `options`"
+    required = false
+    default = []
+
+    [templates.base.preamble]
+    type = "string"
+    description = "LaTeX code to be inserted in the preamble"
+    required = false
+    default = ""
+
+    [templates.base.title]
+    type = "string"
+    description = "Title of the paper"
+    required = true
+
+    [templates.base.authors]
+    type = "list"
+    description = "Authors of the paper, list of dictionaries with keys `index`, `name`"
+    required = true
+
+    [templates.base.affiliations]
+    type = "list"
+    description = "Affiliations of the authors, list of dictionaries with keys `index`, `affiliation`"
+    required = true
+
+    [templates.base.abstract]
+    type = "string"
+    description = "Abstract of the paper"
+    required = true
+
+    [templates.base.keywords]
+    type = "list"
+    description = "Keywords of the paper, list of strings"
+    required = true
+
+    [templates.base.bibliography]
+    type = "string"
+    description = "Path to the bibliography (`*.bib`) file"
+    required = true
+
+[templates.ascelike-new]
+
+    [templates.ascelike-new.documentclass]
+    type = "string"
+    description = "Document class, e.g. `Journal`, `Proceedings` or `NewProceedings`"
+    required = false
+    default = "Journal"
+    choices = ["Journal", "Proceedings", "NewProceedings"]
+
+    [templates.ascelike-new.nametag]
+    type = "string"
+    description = "Name tag of the paper, usually last name of the first author"
+    required = true

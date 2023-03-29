@@ -23,8 +23,7 @@ jobs:
         run: |
           git submodule deinit templates
           git rm --cached -r templates
-          rm -rf LICENSE .readthedocs.yml .gitmodules
-          rm -rd .github docs
+          rm -rf LICENSE .readthedocs.yml .gitmodules .github/workflows/template-cleanup.yml docs
 
       # Commit modified files
       - name: Commit files

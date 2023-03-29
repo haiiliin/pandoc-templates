@@ -2,6 +2,10 @@
 documentclass: Journal
 packages:
   - name: filecontents
+  - name: longtable
+  - name: booktabs
+  - name: multirow
+  - name: array
 preamble: |
   \begin{filecontents*}{example.bib}
   @Article{key,

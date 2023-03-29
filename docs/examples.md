@@ -40,3 +40,5 @@ bibliography: example.bib
 
 This is an example of a document written in Markdown and converted to LaTeX using Pandoc.
 ```
+
+The compiled PDF file of the example manuscript is available {download}`here <_static/pdf/manuscript.pdf>`.

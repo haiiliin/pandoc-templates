@@ -13,14 +13,7 @@ project = 'pypandoctemplates'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
-try:
-    import pypandoctemplates
-    release = version = pypandoctemplates.__version__.split('+')[0]
-except (ImportError, AttributeError):
-    import warnings
-    warnings.warn('pypandoctemplates is not installed, using 0.0.1')
-    release = version = '0.0.1'
-sys.path.insert(0, os.path.abspath('docs'))
+release = version = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

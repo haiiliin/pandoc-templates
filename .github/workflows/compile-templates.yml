@@ -55,7 +55,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add templates/${{ matrix.template }}.tex
           git add templates/${{ matrix.template }}.pdf
-          git commit -m "Compile template ${{ matrix.template }}"
+          git commit -m "Compile template ${{ matrix.template }}" || true
 
       # Push changes
       - name: Push changes

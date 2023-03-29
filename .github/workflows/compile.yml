@@ -1,0 +1,79 @@
+# Compile the manuscript
+
+name: Compile
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+    inputs:
+      template:
+        description: 'Template to use'
+        required: true
+        default: 'ascelike-new'
+        type: choice
+        options:
+          - 'ascelike-new'
+      filename:
+        description: 'Filename of the paper'
+        required: true
+        default: 'manuscript'
+        type: string
+      compiler:
+        description: The LaTeX engine to be invoked
+        default: 'latexmk'
+        required: true
+        type: choice
+        options:
+          - 'latexmk'
+          - 'pdflatex'
+          - 'xelatex'
+
+jobs:
+    compile:
+      name: Compile manuscript
+      runs-on: ubuntu-latest
+      env:
+        template: ${{ github.event.inputs.template }}
+        filename: ${{ github.event.inputs.filename }}
+        compiler: ${{ github.event.inputs.compiler }}
+      steps:
+
+      # Check out current repository
+      - name: Fetch Sources
+        uses: actions/checkout@v3
+
+      # Setup pandoc
+      - name: Setup pandoc
+        uses: nikeee/setup-pandoc@v1
+
+      # Copy required template files
+      - name: Copy template files
+        run: |
+          cp templates/${{ env.template }}/*.bst . || true
+          cp templates/${{ env.template }}/*.cls . || true
+          cp templates/${{ env.template }}/*.sty . || true
+
+      # Generate tex sources
+      - name: Generate tex sources
+        run: pandoc --from markdown --to latex --template templates/${{ env.template }} --output ${{ env.filename }}.tex ${{ env.filename }}.md
+
+      # Compile manuscript
+      - name: Compile manuscript
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ env.filename }}.tex
+          compiler: ${{ env.compiler }}
+
+      # Upload compiled manuscript
+      - name: Upload compiled manuscript
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.filename }}
+          path: |
+            ${{ env.filename }}.*
+            *.bst
+            *.cls
+            *.sty

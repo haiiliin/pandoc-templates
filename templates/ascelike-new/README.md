@@ -57,7 +57,7 @@ keywords:
     - example
     - paper
 bibliography: example.bib
-...
+---
 
 # Introduction
 

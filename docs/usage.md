@@ -27,7 +27,7 @@ the `Workflow permissions` section.
 :width: 100%
 ```
 
-Go the project home page and click on the `Actions` tab. Then click on the `template` workflow, select the failed run
+Go the project home page and click on the `Actions` tab. Then click on the `Template` workflow, select the failed run
 and click on `Re-run jobs`.
 ```{image} /images/re-run-jobs.png
 :width: 30%

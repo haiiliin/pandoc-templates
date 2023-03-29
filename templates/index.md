@@ -1,4 +1,4 @@
-# Available Templates
+# Templates
 
 ```{toctree}
 

@@ -1,14 +1,13 @@
-% pypandoctemplates documentation master file, created by
+% pandoc-templates documentation master file, created by
 % sphinx-quickstart on Sat Oct 29 22:59:28 2022.
 % You can adapt this file completely to your liking, but it should at least
 % contain the root `toctree` directive.
 
-# pypandoctemplates
+# pandoc-templates
 
 - GitHub: <https://github.com/haiiliin/pandoc-templates/>
-- Documentation: <https://pypandoctemplates.readthedocs.io/en/latest/>
-- PyPI: <https://pypi.org/project/pypandoctemplates/>
-- Read the Docs: <https://readthedocs.org/projects/pypandoctemplates/>
+- Documentation: <https://pandoc-templates.readthedocs.io/en/latest/>
+- Read the Docs: <https://readthedocs.org/projects/pandoc-templates/>
 
 ```{toctree}
 :caption: 'Contents:'

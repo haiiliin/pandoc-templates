@@ -131,14 +131,3 @@ dmypy.json
 # IDE configuration files
 .vscode/
 .idea/
-
-# Temporary example files
-examples/**/*.bib
-examples/**/*.bst
-examples/**/*.cls
-examples/**/*.pdf
-examples/**/*.sty
-examples/**/*.tex
-
-# Temporary version control files
-pypandoctemplates/_version.py

@@ -6,10 +6,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -48,9 +44,9 @@ jobs:
       # Compile manuscript
       - name: Compile manuscript
         uses: dante-ev/latex-action@latest
-        working-directory: templates
         with:
-          root_file: ${{ matrix.filename }}.tex
+          root_file: ${{ matrix.template }}.tex
+          working_directory: templates
 
       # Commit compiled manuscript
       - name: Commit compiled manuscript
@@ -63,5 +59,4 @@ jobs:
 
       # Push changes
       - name: Push changes
-        if: github.event_name == 'push'
         uses: ad-m/github-push-action@master

@@ -16,7 +16,6 @@ on:
 
 jobs:
     compile:
-      name: Compile manuscript
       runs-on: ubuntu-latest
       strategy:
         matrix:

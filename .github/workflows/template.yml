@@ -30,7 +30,7 @@ jobs:
 
       # Cleanup project
       - name: Cleanup
-        run: rm -rf LICENSE .readthedocs.yml .gitmodules .github/workflows/template.yml docs
+        run: rm -rf LICENSE .readthedocs.yml .github/workflows/template.yml docs
 
       # Copy template file
       - name: Copy template files

@@ -5,14 +5,14 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-# The full version, including alpha/beta/rc tags
-import os
-import sys
+# import os
+# import sys
 
 project = 'pandoc-templates'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
+# The full version, including alpha/beta/rc tags
 release = version = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
@@ -26,7 +26,6 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'defaults']
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

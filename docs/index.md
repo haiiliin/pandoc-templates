@@ -14,6 +14,7 @@
 :maxdepth: 2
 
 usage
+examples
 templates/ascelike-new/README
 ```
 

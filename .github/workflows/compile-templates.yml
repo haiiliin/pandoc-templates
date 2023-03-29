@@ -1,0 +1,66 @@
+# Compile the templates
+
+name: Compile templates
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    compile:
+      name: Compile manuscript
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          template:
+            - ascelike-new
+      steps:
+
+      # Check out current repository
+      - name: Fetch Sources
+        uses: actions/checkout@v3
+
+      # Setup pandoc
+      - name: Setup pandoc
+        uses: nikeee/setup-pandoc@v1
+
+      # Copy required template files
+      - name: Copy template files
+        run: |
+          cd templates
+          cp ${{ matrix.template }}/*.bst . || true
+          cp ${{ matrix.template }}/*.cls . || true
+          cp ${{ matrix.template }}/*.sty . || true
+
+      # Generate tex sources
+      - name: Generate tex sources
+        run: pandoc --from markdown --to latex --template ${{ matrix.template }} --output ${{ matrix.template }}.tex ${{ matrix.template }}.md
+
+      # Compile manuscript
+      - name: Compile manuscript
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ matrix.filename }}.tex
+
+      # Commit compiled manuscript
+      - name: Commit compiled manuscript
+        run: |
+          cd ..
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add templates/${{ matrix.template }}.tex
+          git add templates/${{ matrix.template }}.pdf
+          git commit -m "Compile template ${{ matrix.template }}"
+
+      # Push changes
+      - name: Push changes
+        if: github.event_name == 'push'
+        uses: ad-m/github-push-action@master

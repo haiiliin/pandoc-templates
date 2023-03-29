@@ -25,7 +25,7 @@ extensions = [
 ]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'defaults']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'defaults', 'templates/README.md']
 
 
 # -- Options for HTML output -------------------------------------------------

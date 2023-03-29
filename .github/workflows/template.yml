@@ -30,10 +30,7 @@ jobs:
 
       # Cleanup project
       - name: Cleanup
-        run: |
-          git submodule deinit templates
-          git rm --cached -r templates
-          rm -rf LICENSE .readthedocs.yml .gitmodules .github/workflows/template.yml docs
+        run: rm -rf LICENSE .readthedocs.yml .gitmodules .github/workflows/template.yml docs
 
       # Copy template file
       - name: Copy template files

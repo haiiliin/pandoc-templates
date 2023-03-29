@@ -17,7 +17,7 @@ on:
         options:
           - 'ascelike-new'
       filename:
-        description: 'Filename of the paper'
+        description: 'File name of the manuscript'
         required: true
         default: 'manuscript'
         type: string

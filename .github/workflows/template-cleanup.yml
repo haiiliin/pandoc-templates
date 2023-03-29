@@ -1,0 +1,42 @@
+# GitHub Actions Workflow to cleanup the template project after it has been used to create a new repository.
+
+name: Template
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cleanup:
+    name: Template Cleanup
+    runs-on: ubuntu-latest
+    if: github.event.repository.name != 'pandoc-templates'
+    steps:
+
+      # Check out current repository
+      - name: Fetch Sources
+        uses: actions/checkout@v2
+
+      # Cleanup project
+      - name: Cleanup
+        run: |
+          git submodule deinit templates
+          git rm --cached -r templates
+          rm -rf LICENSE .readthedocs.yml .gitmodules
+          rm -rd .github docs
+
+      # Commit modified files
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Template cleanup"
+
+      # Push changes
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}

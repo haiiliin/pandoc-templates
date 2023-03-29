@@ -9,7 +9,7 @@
 import os
 import sys
 
-project = 'pypandoctemplates'
+project = 'pandoc-templates'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 

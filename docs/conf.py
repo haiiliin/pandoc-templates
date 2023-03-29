@@ -5,20 +5,23 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-# The full version, including alpha/beta/rc tags
 import os
 import sys
+
+sys.path.insert(0, os.path.abspath('./_ext'))
 
 project = 'pandoc-templates'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
+# The full version, including alpha/beta/rc tags
 release = version = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    'copy_source',
     'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
@@ -27,6 +30,9 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'defaults']
 
+copy_files = [
+    ("../templates", "templates"),
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

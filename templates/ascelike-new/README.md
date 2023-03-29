@@ -20,6 +20,13 @@ Options are set in the YAML header. The following options are available:
 |   `keywords`    |  list  |   Yes    |              | Keywords of the paper, list of strings                                             |
 | `bibliography`  | string |   Yes    |              | Path to the bibliography (`*.bib`) file                                            |
 
+## Required Files
+
+Please make sure that the following files are in the same directory as the Markdown file:
+
+- `ascelike-new.cls`: LaTeX class file
+- `ascelike-new.bst`: BibTeX style file
+
 ## Example
 
 ```markdown

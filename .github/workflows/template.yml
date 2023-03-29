@@ -35,6 +35,11 @@ jobs:
           git rm --cached -r templates
           rm -rf LICENSE .readthedocs.yml .gitmodules .github/workflows/template.yml docs
 
+      # Copy template file
+      - name: Copy template files
+        run: |
+          cp templates/${{ github.event.inputs.template }}.md ${{ github.event.inputs.filename }}.md
+
       # Commit modified files
       - name: Commit files
         run: |
@@ -42,10 +47,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Template cleanup"
-
-      # Copy template files
-      - name: Copy template files
-        run: cp templates/${{ github.event.inputs.template }}.md ${{ github.event.inputs.filename }}.md
 
       # Push changes
       - name: Push changes

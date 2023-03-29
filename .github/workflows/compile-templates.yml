@@ -33,26 +33,27 @@ jobs:
 
       # Copy required template files
       - name: Copy template files
+        working-directory: templates
         run: |
-          cd templates
           cp ${{ matrix.template }}/*.bst . || true
           cp ${{ matrix.template }}/*.cls . || true
           cp ${{ matrix.template }}/*.sty . || true
 
       # Generate tex sources
       - name: Generate tex sources
+        working-directory: templates
         run: pandoc --from markdown --to latex --template ${{ matrix.template }} --output ${{ matrix.template }}.tex ${{ matrix.template }}.md
 
       # Compile manuscript
       - name: Compile manuscript
         uses: dante-ev/latex-action@latest
+        working-directory: templates
         with:
           root_file: ${{ matrix.filename }}.tex
 
       # Commit compiled manuscript
       - name: Commit compiled manuscript
         run: |
-          cd ..
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add templates/${{ matrix.template }}.tex

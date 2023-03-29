@@ -1,4 +1,4 @@
-# asce-new: Template for Preparing Your Submission to the American Society Of Civil Engineers (ASCE)
+# ascelike-new: Template for Preparing Your Submission to the American Society Of Civil Engineers (ASCE)
 
 This is a template for preparing your submission to the American Society Of Civil Engineers (ASCE). It is based on the [ASCE LaTeX template](https://www.overleaf.com/latex/templates/template-for-preparing-your-submission-to-the-american-society-of-civil-engineers-asce/pbwcqsvndpty/).
 
@@ -56,8 +56,8 @@ This is an example of a document written in Markdown and converted to LaTeX usin
 
 ## Usage
 
-Use the `asce-new` template to create a new paper:
+Use the `ascelike-new` template to create a new paper:
 
 ```bash
-pandoc --from markdown --to latex --template ascelike-new --output example.tex example.md
+pandoc --from markdown --to latex --template templates/ascelike-new --output ascelike-new.tex ascelike-new.md
 ```

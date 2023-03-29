@@ -20,18 +20,19 @@ except (ImportError, AttributeError):
     import warnings
     warnings.warn('pypandoctemplates is not installed, using 0.0.1')
     release = version = '0.0.1'
-sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('docs'))
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx_copybutton',
 ]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'defaults']
 
 
 # -- Options for HTML output -------------------------------------------------

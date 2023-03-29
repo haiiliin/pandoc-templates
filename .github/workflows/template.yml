@@ -3,15 +3,25 @@
 name: Template
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      template:
+        description: 'Template to use'
+        required: true
+        default: 'ascelike-new'
+        type: choice
+        options:
+          - 'ascelike-new'
+      filename:
+        description: 'Filename of paper'
+        required: true
+        default: 'manuscript'
+        type: string
 
 jobs:
   cleanup:
     name: Template Cleanup
     runs-on: ubuntu-latest
-    if: github.event.repository.name != 'pandoc-templates'
     steps:
 
       # Check out current repository
@@ -32,6 +42,10 @@ jobs:
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Template cleanup"
+
+      # Copy template files
+      - name: Copy template files
+        run: cp templates/${{ github.event.inputs.template }}.md ${{ github.event.inputs.filename }}.md
 
       # Push changes
       - name: Push changes

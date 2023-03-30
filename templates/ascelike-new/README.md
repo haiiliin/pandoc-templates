@@ -7,18 +7,18 @@ This is a template for preparing your submission to the American Society Of Civi
 
 Options are set in the YAML header. The following options are available:
 
-|       Key       |  Type  | Required |   Default    | Description                                                                        |
-|:---------------:|:------:|:--------:|:------------:|------------------------------------------------------------------------------------|
-| `documentclass` | string |    No    |  `Journal`   | Document class, e.g. `Journal`, `Proceedings` or `NewProceedings`                  |
-|   `packages`    |  list  |    No    |     `[]`     | Packages to be loaded, list of dictionaries with keys `name`, `options`            |
-|   `preamble`    | string |    No    |     `""`     | LaTeX code to be inserted in the preamble                                          |
-|     `title`     | string |   Yes    |              | Title of the paper                                                                 |
-|    `authors`    |  list  |   Yes    |              | Authors of the paper, list of dictionaries with keys `index`, `name`               |
-| `affiliations`  |  list  |   Yes    |              | Affiliations of the authors, list of dictionaries with keys `index`, `affiliation` |
-|    `nametag`    | string |   Yes    |              | Name tag of the paper, usually last name of the first author                       |
-|   `abstract`    | string |   Yes    |              | Abstract of the paper                                                              |
-|   `keywords`    |  list  |   Yes    |              | Keywords of the paper, list of strings                                             |
-| `bibliography`  | string |   Yes    |              | Path to the bibliography (`*.bib`) file                                            |
+|       Key       |  Type  | Required |   Default    | Description                                                                                    |
+|:---------------:|:------:|:--------:|:------------:|------------------------------------------------------------------------------------------------|
+| `documentclass` | string |    No    |  `Journal`   | Document class, e.g. `Journal`, `Proceedings` or `NewProceedings`                              |
+|   `packages`    |  list  |    No    |     `[]`     | Packages to be loaded, list of dictionaries with keys `name`, `options`, `options` is optional |
+|   `preamble`    | string |    No    |     `""`     | LaTeX code to be inserted in the preamble                                                      |
+|     `title`     | string |   Yes    |              | Title of the paper                                                                             |
+|    `authors`    |  list  |   Yes    |              | Authors of the paper, list of dictionaries with keys `index`, `name`                           |
+| `affiliations`  |  list  |   Yes    |              | Affiliations of the authors, list of dictionaries with keys `index`, `affiliation`             |
+|    `nametag`    | string |   Yes    |              | Name tag of the paper, usually last name of the first author                                   |
+|   `abstract`    | string |   Yes    |              | Abstract of the paper                                                                          |
+|   `keywords`    |  list  |   Yes    |              | Keywords of the paper, list of strings                                                         |
+| `bibliography`  | string |   Yes    |              | Path to the bibliography (`*.bib`) file                                                        |
 
 ## Required Files
 

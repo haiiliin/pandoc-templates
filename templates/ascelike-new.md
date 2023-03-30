@@ -26,8 +26,8 @@ nametag: Wang
 abstract: |
   This is an example paper.
 keywords:
-    - example
-    - paper
+  - example
+  - paper
 bibliography: example.bib
 ---
 

@@ -7,13 +7,14 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 # import os
 # import sys
+import pandoc_templates
 
 project = 'pandoc-templates'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-release = version = '0.0.1'
+release = version = pandoc_templates.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

@@ -30,7 +30,17 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.md', 'defaults']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_book_theme'
+html_theme_options = {
+    "repository_url": "https://github.com/haiiliin/pandoc-templates",
+    "path_to_docs": "docs",
+    "use_source_button": True,
+    "repository_branch": "main",
+    "use_edit_page_button": True,
+    "use_repository_button": True,
+    "use_issues_button": True,
+    "home_page_in_toc": True,
+}
 html_static_path = ['_static']
 
 # -- Options for LaTeX output ------------------------------------------------

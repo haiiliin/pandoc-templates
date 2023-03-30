@@ -1,3 +1,4 @@
 myst-parser
+pydata-sphinx-theme==0.13.1  # 0.13.2 is incompatible with sphinx-book-theme 1.0.0, see https://github.com/executablebooks/sphinx-book-theme/issues/711
 sphinx-book-theme
 sphinx-copybutton

@@ -41,8 +41,7 @@ jobs:
 
       # Generate tex sources
       - name: Generate tex sources
-        working-directory: templates
-        run: pandoc --from markdown --to latex --template ${{ matrix.template }} --output ${{ matrix.template }}.tex ${{ matrix.template }}.md
+        run: pandoc --from markdown --to latex --template ${{ matrix.template }} --data-dir . --output templates/${{ matrix.template }}.tex templates/${{ matrix.template }}.md
 
       # Compile manuscript
       - name: Compile manuscript

@@ -57,7 +57,7 @@ jobs:
 
       # Generate tex sources
       - name: Generate tex sources
-        run: pandoc --from markdown --to latex --template templates/${{ env.template }} --output ${{ env.filename }}.tex ${{ env.filename }}.md
+        run: pandoc --from markdown --to latex --template ${{ env.template }} --data-dir . --output ${{ env.filename }}.tex ${{ env.filename }}.md
 
       # Compile manuscript
       - name: Compile manuscript

@@ -26,4 +26,4 @@ Please make sure that the following files are in the same directory as the Markd
 
 - [ascelike-new.cls](ascelike-new.cls): LaTeX class file 
 - [ascelike-new.bst](ascelike-new.bst): BibTeX style file
-- [ascelike-new.latex](ascelike-new.latex): Pandoc LaTeX template file
+- [ascelike-new.latex](../ascelike-new.latex): Pandoc LaTeX template file

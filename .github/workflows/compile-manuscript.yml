@@ -1,6 +1,6 @@
 # Compile the manuscript
 
-name: Compile
+name: Compile Manuscript
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

@@ -5,16 +5,15 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-import os, sys
-sys.path.insert(0, os.path.abspath('.'))
+# import os
+# import sys
 
 project = 'pandoc-templates'
 copyright = '2022, WANG Hailin'
 author = 'WANG Hailin'
 
 # The full version, including alpha/beta/rc tags
-import versioneer
-release = version = versioneer.__version__
+release = version = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

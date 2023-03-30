@@ -1,6 +1,6 @@
 # GitHub Actions Workflow to cleanup the template project after it has been used to create a new repository.
 
-name: Template
+name: GitHub Template
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
 
       # Cleanup project
       - name: Cleanup
-        run: rm -rf LICENSE .readthedocs.yml .github/workflows/template.yml docs
+        run: rm -rf LICENSE .readthedocs.yml .github/workflows/cleanup-template.yml .github/workflows/compile-templates.yml docs
 
       # Commit modified files
       - name: Commit files

@@ -18,7 +18,7 @@ Fill in the repository name and description and click on `Create repository from
 
 ## Remove unnecessary files
 
-An automated workflow `.github/workflows/template.yml` is set up to remove unnecessary files from the repository. 
+An automated workflow `.github/workflows/cleanup-template.yml` is set up to remove unnecessary files from the repository. 
 This workflow is triggered when a new repository is created from the template. Because the GitHub workflow does not
 have access to write to the repository, the workflow will fail. To fix this, go to the `Settings` tab of the repository
 and click on `Actions` and `General` in the left menu. Then select `Read and write permissions` for the `Actions` in
@@ -27,8 +27,8 @@ the `Workflow permissions` section.
 :width: 100%
 ```
 
-Go the project home page and click on the `Actions` tab. Then click on the `Template` workflow, select the failed run
-and click on `Re-run jobs`.
+Go the project home page and click on the `Actions` tab. Then click on the `GitHub Template` workflow, select the 
+failed run and click on `Re-run jobs`.
 ```{image} /images/re-run-jobs.png
 :width: 30%
 ```
@@ -47,7 +47,8 @@ repository.
 ## Clone the repository and make changes to the manuscript
 
 Clone the repository to your local machine and make any changes to the manuscript file. Then commit and push the changes
-to the repository. Use the [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) syntax for the manuscript file.
+to the repository. Use the [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) syntax for the 
+manuscript file.
 
 ## Generate the PDF document
 

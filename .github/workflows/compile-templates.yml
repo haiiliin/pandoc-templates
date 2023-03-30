@@ -1,6 +1,6 @@
 # Compile the templates
 
-name: Compile templates
+name: Pandoc Templates
 
 on:
   push:

@@ -9,6 +9,7 @@ Detailed metadata of the manuscript specified in the YAML header is explained in
 ## ascelike-new: Template for Preparing Your Submission to the American Society Of Civil Engineers (ASCE)
 
 ```{literalinclude} templates/ascelike-new.md
+:language: markdown
 ```
-The compiled PDF file is available {download}`here <templates/ascelike-new.pdf>` and 
-the compiled LaTeX source file is available {download}`here <templates/ascelike-new.tex>`.
+The compiled LaTeX source file is available {download}`here <templates/ascelike-new.tex>` and 
+the compiled PDF file is available {download}`here <templates/ascelike-new.pdf>`.

@@ -10,5 +10,5 @@ Detailed metadata of the manuscript specified in the YAML header is explained in
 
 ```{literalinclude} templates/ascelike-new.md
 ```
-The compiled PDF file of the example manuscript is available {download}`here <templates/ascelike-new.pdf>` and 
-the LaTeX source file is available {download}`here <templates/ascelike-new.tex>`.
+The compiled PDF file is available {download}`here <templates/ascelike-new.pdf>` and 
+the compiled LaTeX source file is available {download}`here <templates/ascelike-new.tex>`.

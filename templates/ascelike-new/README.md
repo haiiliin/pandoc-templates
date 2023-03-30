@@ -24,6 +24,6 @@ Options are set in the YAML header. The following options are available:
 
 Please make sure that the following files are in the same directory as the Markdown file:
 
-- [ascelike-new.cls](ascelike-new.cls): LaTeX class file 
 - [ascelike-new.bst](ascelike-new.bst): BibTeX style file
+- [ascelike-new.cls](ascelike-new.cls): LaTeX class file
 - [ascelike-new.latex](/templates/ascelike-new.latex): Pandoc LaTeX template file

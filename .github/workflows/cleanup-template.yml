@@ -19,7 +19,7 @@ jobs:
 
       # Cleanup project
       - name: Cleanup
-        run: rm -rf LICENSE .readthedocs.yml .github/workflows/cleanup-template.yml .github/workflows/compile-templates.yml docs
+        run: rm -rf LICENSE .readthedocs.yml .github/workflows/cleanup-template.yml .github/workflows/compile-templates.yml .github/release.yml docs
 
       # Commit modified files
       - name: Commit files
